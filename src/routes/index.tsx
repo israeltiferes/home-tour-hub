@@ -698,14 +698,14 @@ function Field({
 }) {
   return (
     <div>
-      <label className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+      <label className="text-[11px] uppercase tracking-[0.22em] text-bone/60">
         {label}
       </label>
       <input
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-2 w-full border-0 border-b border-border bg-transparent py-3 text-[15px] outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-foreground"
+        className="mt-2 w-full border-0 border-b border-bone/20 bg-transparent py-3 text-[15px] text-bone outline-none transition-colors placeholder:text-bone/40 focus:border-gold"
       />
     </div>
   );
@@ -722,13 +722,13 @@ function SelectField({
 }) {
   return (
     <div>
-      <label className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+      <label className="text-[11px] uppercase tracking-[0.22em] text-bone/60">
         {label}
       </label>
       <select
         name={name}
         defaultValue=""
-        className="mt-2 w-full border-0 border-b border-border bg-transparent py-3 text-[15px] outline-none transition-colors focus:border-foreground"
+        className="mt-2 w-full border-0 border-b border-bone/20 bg-transparent py-3 text-[15px] text-bone outline-none transition-colors focus:border-gold [&>option]:text-ink"
       >
         {options.map((o) => (
           <option key={o}>{o}</option>
