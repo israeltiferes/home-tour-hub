@@ -536,7 +536,7 @@ function Itinerary() {
 const included = [
   "Guided community tours through Israel's top Anglo neighborhoods",
   "New development visits with project representatives",
-  "Honest meetings with developers about construction timelines",
+  
   "Legal guidance and Q&A with an Israeli real estate attorney",
   "Mortgage and financing education for American buyers",
   "School and community comparisons across all neighborhoods",
