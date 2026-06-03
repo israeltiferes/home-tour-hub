@@ -663,7 +663,7 @@ function RegistrationForm() {
 
       <button
         type="submit"
-        className="group mt-10 inline-flex w-full items-center justify-center gap-3 bg-ink px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-bone transition-colors hover:bg-gold hover:text-ink"
+        className="group mt-10 inline-flex w-full items-center justify-center gap-3 bg-gold px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-ink transition-colors hover:bg-gold-light"
       >
         Reserve my spot
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -673,12 +673,12 @@ function RegistrationForm() {
         href="https://wa.me/972544336098"
         target="_blank"
         rel="noreferrer"
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-border px-8 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-foreground transition-colors hover:border-foreground"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-bone/20 px-8 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-bone transition-colors hover:border-gold hover:text-gold"
       >
         <MessageCircle className="h-4 w-4" />
         Chat on WhatsApp instead
       </a>
-      <p className="mt-4 text-center text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+      <p className="mt-4 text-center text-[11px] uppercase tracking-[0.18em] text-bone/50">
         Reply within 24 hours · No spam · No pressure
       </p>
     </form>
