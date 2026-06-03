@@ -183,7 +183,7 @@ function SectionHeading({
 
 const tours = [
   {
-    n: "04",
+    n: "10/4",
     day: "Sunday · October 4",
     city: "Tel Aviv",
     accent: "+ Netanya",
@@ -196,7 +196,7 @@ const tours = [
     ],
   },
   {
-    n: "05",
+    n: "10/5",
     day: "Monday · October 5",
     city: "Jerusalem",
     accent: "",
@@ -209,7 +209,7 @@ const tours = [
     ],
   },
   {
-    n: "06",
+    n: "10/6",
     day: "Tuesday · October 6",
     city: "Modi'in",
     accent: "+ Beit Shemesh",
