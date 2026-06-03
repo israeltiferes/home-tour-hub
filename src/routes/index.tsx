@@ -62,7 +62,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between px-6 pt-32 pb-12 md:px-10 md:pt-40 md:pb-16">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between gap-12 px-5 pt-28 pb-10 sm:px-6 md:px-10 md:pt-40 md:pb-16">
         <div className="max-w-3xl">
           <Reveal>
             <div className="flex items-center gap-3 text-bone/70">
@@ -74,7 +74,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h1 className="mt-7 font-display text-[clamp(2.75rem,7.5vw,6.5rem)] font-light leading-[0.95] tracking-[-0.02em] text-balance">
+            <h1 className="mt-7 font-display text-[clamp(2.5rem,7.5vw,6.5rem)] font-light leading-[1] tracking-[-0.02em] text-balance">
               Explore Israel <span className="text-gold italic font-normal">Before You Decide.</span>
             </h1>
           </Reveal>
@@ -86,10 +86,10 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.4}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <a
                 href="#register"
-                className="group inline-flex items-center gap-3 bg-gold px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-ink transition-colors hover:bg-gold-light"
+                className="group inline-flex w-full items-center justify-center gap-3 bg-gold px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-ink transition-colors hover:bg-gold-light sm:w-auto sm:justify-start"
               >
                 Reserve your spot
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -98,7 +98,7 @@ function Hero() {
                 href="https://wa.me/972544336098"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 border border-bone/30 px-7 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-bone backdrop-blur-sm transition-colors hover:bg-bone/10"
+                className="inline-flex w-full items-center justify-center gap-3 border border-bone/30 px-7 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-bone backdrop-blur-sm transition-colors hover:bg-bone/10 sm:w-auto sm:justify-start"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
@@ -108,7 +108,7 @@ function Hero() {
         </div>
 
         {/* Bottom strip */}
-        <Reveal delay={0.5} className="mt-16">
+        <Reveal delay={0.5} className="mt-12 md:mt-16">
           <div className="grid grid-cols-2 gap-px overflow-hidden border border-bone/15 bg-bone/10 md:grid-cols-4">
             {[
               { icon: Scale, label: "Real Estate Lawyer" },
@@ -118,10 +118,10 @@ function Hero() {
             ].map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="flex items-center gap-3 bg-ink/70 px-5 py-5 backdrop-blur-md"
+                className="flex items-center gap-2.5 bg-ink/70 px-4 py-4 backdrop-blur-md sm:gap-3 sm:px-5 sm:py-5"
               >
-                <Icon className="h-4 w-4 text-gold" />
-                <span className="text-[11px] uppercase tracking-[0.18em] text-bone/85">
+                <Icon className="h-4 w-4 shrink-0 text-gold" />
+                <span className="text-[10px] uppercase tracking-[0.16em] text-bone/85 sm:text-[11px] sm:tracking-[0.18em]">
                   {label}
                 </span>
               </div>
