@@ -75,7 +75,7 @@ function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="mt-7 font-display text-[clamp(2.5rem,7.5vw,6.5rem)] font-light leading-[1] tracking-[-0.02em] text-balance">
-              Explore Israel <span className="text-gold italic font-normal">Before You Decide.</span>
+              Discover the Israel<br /><span className="text-gold italic font-normal">you'd actually live in.</span>
             </h1>
           </Reveal>
 
