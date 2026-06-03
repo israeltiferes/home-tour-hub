@@ -62,7 +62,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between px-6 pt-32 pb-12 md:px-10 md:pt-40 md:pb-16">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between gap-12 px-5 pt-28 pb-10 sm:px-6 md:px-10 md:pt-40 md:pb-16">
         <div className="max-w-3xl">
           <Reveal>
             <div className="flex items-center gap-3 text-bone/70">
@@ -74,7 +74,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h1 className="mt-7 font-display text-[clamp(2.75rem,7.5vw,6.5rem)] font-light leading-[0.95] tracking-[-0.02em] text-balance">
+            <h1 className="mt-7 font-display text-[clamp(2.5rem,7.5vw,6.5rem)] font-light leading-[1] tracking-[-0.02em] text-balance">
               Explore Israel <span className="text-gold italic font-normal">Before You Decide.</span>
             </h1>
           </Reveal>
@@ -86,10 +86,10 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.4}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <a
                 href="#register"
-                className="group inline-flex items-center gap-3 bg-gold px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-ink transition-colors hover:bg-gold-light"
+                className="group inline-flex w-full items-center justify-center gap-3 bg-gold px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-ink transition-colors hover:bg-gold-light sm:w-auto sm:justify-start"
               >
                 Reserve your spot
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -98,7 +98,7 @@ function Hero() {
                 href="https://wa.me/972544336098"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 border border-bone/30 px-7 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-bone backdrop-blur-sm transition-colors hover:bg-bone/10"
+                className="inline-flex w-full items-center justify-center gap-3 border border-bone/30 px-7 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-bone backdrop-blur-sm transition-colors hover:bg-bone/10 sm:w-auto sm:justify-start"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
@@ -108,7 +108,7 @@ function Hero() {
         </div>
 
         {/* Bottom strip */}
-        <Reveal delay={0.5} className="mt-16">
+        <Reveal delay={0.5} className="mt-12 md:mt-16">
           <div className="grid grid-cols-2 gap-px overflow-hidden border border-bone/15 bg-bone/10 md:grid-cols-4">
             {[
               { icon: Scale, label: "Real Estate Lawyer" },
@@ -118,10 +118,10 @@ function Hero() {
             ].map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="flex items-center gap-3 bg-ink/70 px-5 py-5 backdrop-blur-md"
+                className="flex items-center gap-2.5 bg-ink/70 px-4 py-4 backdrop-blur-md sm:gap-3 sm:px-5 sm:py-5"
               >
-                <Icon className="h-4 w-4 text-gold" />
-                <span className="text-[11px] uppercase tracking-[0.18em] text-bone/85">
+                <Icon className="h-4 w-4 shrink-0 text-gold" />
+                <span className="text-[10px] uppercase tracking-[0.16em] text-bone/85 sm:text-[11px] sm:tracking-[0.18em]">
                   {label}
                 </span>
               </div>
@@ -225,8 +225,8 @@ const tours = [
 
 function Tours() {
   return (
-    <section id="tour" className="bg-sand py-28 md:py-36">
-      <div className="mx-auto max-w-[1480px] px-6 md:px-10">
+    <section id="tour" className="bg-sand py-20 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <Reveal>
           <SectionHeading
             eyebrow="October 2026 · Israel"
@@ -236,7 +236,7 @@ function Tours() {
           />
         </Reveal>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-3">
           {tours.map((t, i) => (
             <Reveal key={t.n} delay={i * 0.08}>
               <article className="group relative flex h-full flex-col overflow-hidden bg-background shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-luxe">
@@ -249,14 +249,14 @@ function Tours() {
                     height={1600}
                     className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-6 pt-24">
-                    <div className="font-display text-[88px] font-light leading-none text-bone/95">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-5 pt-20 md:p-6 md:pt-24">
+                    <div className="font-display text-[72px] font-light leading-none text-bone/95 md:text-[88px]">
                       {t.n}
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-1 flex-col gap-4 p-7">
+                <div className="flex flex-1 flex-col gap-4 p-6 md:p-7">
                   <div>
                     <div className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
                       {t.day}
@@ -319,9 +319,9 @@ const gains = [
 
 function Gains() {
   return (
-    <section className="py-28 md:py-36">
-      <div className="mx-auto max-w-[1480px] px-6 md:px-10">
-        <div className="grid gap-16 lg:grid-cols-[1fr_1.4fr] lg:gap-24">
+    <section className="py-20 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-24">
           <Reveal>
             <div className="lg:sticky lg:top-32">
               <SectionHeading
@@ -336,7 +336,7 @@ function Gains() {
           <div className="divide-y divide-border border-t border-border">
             {gains.map(({ icon: Icon, title, text }, i) => (
               <Reveal key={title} delay={i * 0.06}>
-                <div className="group grid grid-cols-[auto_1fr] gap-8 py-10 transition-colors hover:bg-muted/30">
+                <div className="group grid grid-cols-[auto_1fr] gap-5 py-8 transition-colors hover:bg-muted/30 md:gap-8 md:py-10">
                   <div className="flex h-12 w-12 items-center justify-center border border-border bg-background transition-colors group-hover:border-gold group-hover:bg-gold/5">
                     <Icon className="h-5 w-5 text-foreground transition-colors group-hover:text-gold" />
                   </div>
@@ -397,7 +397,7 @@ function Experts() {
         }} />
       </div>
 
-      <div className="relative mx-auto max-w-[1480px] px-6 md:px-10">
+      <div className="relative mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <Reveal>
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3 text-bone/60">
@@ -416,10 +416,10 @@ function Experts() {
           </div>
         </Reveal>
 
-        <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-px bg-bone/10 sm:grid-cols-2 md:mt-16 lg:grid-cols-4">
           {experts.map((e, i) => (
             <Reveal key={e.role} delay={i * 0.08}>
-              <div className="group h-full bg-ink p-8 transition-colors hover:bg-bone/[0.04]">
+              <div className="group h-full bg-ink p-6 transition-colors hover:bg-bone/[0.04] sm:p-8">
                 <div className="flex h-14 w-14 items-center justify-center border border-bone/20 font-display text-lg italic text-gold">
                   {e.initials}
                 </div>
@@ -475,8 +475,8 @@ const itinerary = [
 
 function Itinerary() {
   return (
-    <section id="itinerary" className="py-28 md:py-36">
-      <div className="mx-auto max-w-[1480px] px-6 md:px-10">
+    <section id="itinerary" className="py-20 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <Reveal>
           <SectionHeading
             eyebrow="See it. Feel it. Own it."
@@ -547,7 +547,7 @@ const included = [
 function Register() {
   return (
     <section id="register" className="relative bg-sand py-28 text-foreground md:py-36">
-      <div className="mx-auto grid max-w-[1480px] gap-16 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-[1480px] gap-12 px-5 sm:px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 lg:order-1">
           <div>
             <div className="flex items-center gap-3 text-foreground/60">
@@ -612,7 +612,7 @@ function RegistrationForm() {
           .join("%0A")}`;
         window.open(`https://wa.me/972544336098?text=${msg}`, "_blank");
       }}
-      className="bg-ink p-8 text-bone shadow-luxe md:p-12"
+      className="bg-ink p-6 text-bone shadow-luxe sm:p-8 md:p-12"
     >
       <h3 className="font-display text-3xl font-light tracking-tight md:text-4xl">
         Ready to find your<br />
@@ -766,8 +766,8 @@ const faqs = [
 function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="bg-muted/40 py-28 md:py-36">
-      <div className="mx-auto max-w-3xl px-6 md:px-10">
+    <section id="faq" className="bg-muted/40 py-20 md:py-36">
+      <div className="mx-auto max-w-3xl px-5 sm:px-6 md:px-10">
         <Reveal>
           <div className="flex flex-col items-center gap-5 text-center">
             <Eyebrow>Questions</Eyebrow>
@@ -785,12 +785,12 @@ function FAQ() {
               <div key={f.q} className="border-b border-border">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-6 py-6 text-left transition-colors hover:text-gold"
+                  className="flex w-full items-center justify-between gap-5 py-5 text-left transition-colors hover:text-gold sm:gap-6 sm:py-6"
                 >
-                  <span className="font-display text-xl font-normal tracking-tight md:text-2xl">
+                  <span className="font-display text-lg font-normal tracking-tight sm:text-xl md:text-2xl">
                     {f.q}
                   </span>
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-border">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-border sm:h-8 sm:w-8">
                     {isOpen ? (
                       <Minus className="h-4 w-4" />
                     ) : (
@@ -807,7 +807,7 @@ function FAQ() {
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="pb-8 pr-12 text-[15px] leading-relaxed text-muted-foreground text-pretty">
+                  <p className="pb-7 pr-4 text-[15px] leading-relaxed text-muted-foreground text-pretty sm:pr-12 sm:pb-8">
                     {f.a}
                   </p>
                 </motion.div>
@@ -825,8 +825,8 @@ function FAQ() {
 function Footer() {
   return (
     <footer className="bg-ink text-bone">
-      <div className="mx-auto max-w-[1480px] px-6 py-20 md:px-10">
-        <div className="grid gap-12 md:grid-cols-[2fr_1fr_1fr]">
+      <div className="mx-auto max-w-[1480px] px-5 py-16 sm:px-6 md:px-10 md:py-20">
+        <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr] md:gap-12">
           <div>
             <div className="font-display text-2xl font-light tracking-[0.22em] uppercase">
               Holy <span className="italic font-medium text-gold">Home</span> Tours
@@ -892,7 +892,7 @@ function StickyWA() {
       href="https://wa.me/972544336098"
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-luxe transition-transform hover:scale-105"
+      className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-luxe transition-transform hover:scale-105 md:bottom-6 md:right-6"
       aria-label="Chat on WhatsApp"
     >
       <MessageCircle className="h-6 w-6" />
