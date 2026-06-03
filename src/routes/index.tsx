@@ -612,13 +612,13 @@ function RegistrationForm() {
           .join("%0A")}`;
         window.open(`https://wa.me/972544336098?text=${msg}`, "_blank");
       }}
-      className="bg-bone p-8 text-foreground md:p-12"
+      className="bg-ink p-8 text-bone shadow-luxe md:p-12"
     >
       <h3 className="font-display text-3xl font-light tracking-tight md:text-4xl">
         Ready to find your<br />
-        <em className="italic font-normal text-clay">future home?</em>
+        <em className="italic font-normal text-gold-light">future home?</em>
       </h3>
-      <p className="mt-3 text-sm text-muted-foreground">
+      <p className="mt-3 text-sm text-bone/70">
         Fill in your details and we'll be in touch within 24 hours.
       </p>
       <div className="mt-6 h-px w-12 bg-gold" />
@@ -649,14 +649,14 @@ function RegistrationForm() {
           ]}
         />
         <div>
-          <label className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+          <label className="text-[11px] uppercase tracking-[0.22em] text-bone/60">
             Your biggest question
           </label>
           <textarea
             name="question"
             rows={3}
             placeholder="What do you most need clarity on?"
-            className="mt-2 w-full resize-none border-0 border-b border-border bg-transparent py-3 text-[15px] outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-foreground"
+            className="mt-2 w-full resize-none border-0 border-b border-bone/20 bg-transparent py-3 text-[15px] text-bone outline-none transition-colors placeholder:text-bone/40 focus:border-gold"
           />
         </div>
       </div>
