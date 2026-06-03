@@ -80,7 +80,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-bone/75 text-pretty">
+            <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-bone/95 text-pretty">
               A private small-group experience for anyone seriously considering buying a home in Israel. Tour the communities, explore new developments, and spend real time with lawyers, mortgage brokers, and aliyah advisors — so when the time is right, you already have the right people in your corner.
             </p>
           </Reveal>
