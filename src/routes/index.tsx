@@ -381,7 +381,7 @@ const experts = [
   },
   {
     role: "Tour Guide",
-    name: "Jerusalem Specialist",
+    name: "Licensed Israel Tour Guide",
     desc: "Deep knowledge of every Anglo neighborhood. Every school, every shul, every street. Made aliyah herself.",
     initials: "TG",
   },
