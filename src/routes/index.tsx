@@ -546,44 +546,44 @@ const included = [
 
 function Register() {
   return (
-    <section id="register" className="relative bg-ink py-28 text-bone md:py-36">
+    <section id="register" className="relative bg-sand py-28 text-foreground md:py-36">
       <div className="mx-auto grid max-w-[1480px] gap-16 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <div>
-            <div className="flex items-center gap-3 text-bone/60">
+            <div className="flex items-center gap-3 text-foreground/60">
               <span className="h-px w-10 bg-gold" />
               <span className="text-[11px] uppercase tracking-[0.32em]">What's Included</span>
             </div>
             <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-light leading-[1.02] tracking-[-0.02em]">
               Stop guessing.
               <br />
-              <em className="italic font-normal text-gold-light">Start exploring.</em>
+              <em className="italic font-normal text-gold">Start exploring.</em>
             </h2>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-bone/70 text-pretty">
+            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/75 text-pretty">
               In just a few days, you'll gain the clarity, connections, and
               confidence to make informed decisions about buying a home in
               Israel.
             </p>
 
-            <ul className="mt-10 divide-y divide-bone/10 border-y border-bone/10">
+            <ul className="mt-10 divide-y divide-foreground/10 border-y border-foreground/10">
               {included.map((item) => (
                 <li key={item} className="flex items-start gap-4 py-4">
-                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center border border-gold/50 text-gold">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center border border-gold/60 text-gold">
                     <Check className="h-3 w-3" />
                   </div>
-                  <span className="text-[14px] leading-relaxed text-bone/85">
+                  <span className="text-[14px] leading-relaxed text-foreground/85">
                     {item}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-10 inline-flex items-center gap-3 border border-gold/40 bg-gold/5 px-5 py-3">
+            <div className="mt-10 inline-flex items-center gap-3 border border-gold/50 bg-gold/10 px-5 py-3">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gold" />
               </span>
-              <span className="text-[11px] uppercase tracking-[0.22em] text-gold-light">
+              <span className="text-[11px] uppercase tracking-[0.22em] text-foreground/80">
                 Limited to 15 participants per tour
               </span>
             </div>
