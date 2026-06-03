@@ -62,7 +62,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between gap-12 px-5 pt-28 pb-10 sm:px-6 md:px-10 md:pt-40 md:pb-16">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between gap-12 px-5 pt-28 pb-10 sm:px-5 sm:px-6 md:px-10 md:pt-40 md:pb-16">
         <div className="max-w-3xl">
           <Reveal>
             <div className="flex items-center gap-3 text-bone/70">
@@ -225,8 +225,8 @@ const tours = [
 
 function Tours() {
   return (
-    <section id="tour" className="bg-sand py-28 md:py-36">
-      <div className="mx-auto max-w-[1480px] px-6 md:px-10">
+    <section id="tour" className="bg-sand py-20 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <Reveal>
           <SectionHeading
             eyebrow="October 2026 · Israel"
@@ -319,8 +319,8 @@ const gains = [
 
 function Gains() {
   return (
-    <section className="py-28 md:py-36">
-      <div className="mx-auto max-w-[1480px] px-6 md:px-10">
+    <section className="py-20 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.4fr] lg:gap-24">
           <Reveal>
             <div className="lg:sticky lg:top-32">
@@ -397,7 +397,7 @@ function Experts() {
         }} />
       </div>
 
-      <div className="relative mx-auto max-w-[1480px] px-6 md:px-10">
+      <div className="relative mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <Reveal>
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3 text-bone/60">
@@ -475,8 +475,8 @@ const itinerary = [
 
 function Itinerary() {
   return (
-    <section id="itinerary" className="py-28 md:py-36">
-      <div className="mx-auto max-w-[1480px] px-6 md:px-10">
+    <section id="itinerary" className="py-20 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-5 sm:px-6 md:px-10">
         <Reveal>
           <SectionHeading
             eyebrow="See it. Feel it. Own it."
@@ -547,7 +547,7 @@ const included = [
 function Register() {
   return (
     <section id="register" className="relative bg-sand py-28 text-foreground md:py-36">
-      <div className="mx-auto grid max-w-[1480px] gap-16 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-[1480px] gap-16 px-5 sm:px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 lg:order-1">
           <div>
             <div className="flex items-center gap-3 text-foreground/60">
@@ -766,8 +766,8 @@ const faqs = [
 function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="bg-muted/40 py-28 md:py-36">
-      <div className="mx-auto max-w-3xl px-6 md:px-10">
+    <section id="faq" className="bg-muted/40 py-20 md:py-36">
+      <div className="mx-auto max-w-3xl px-5 sm:px-6 md:px-10">
         <Reveal>
           <div className="flex flex-col items-center gap-5 text-center">
             <Eyebrow>Questions</Eyebrow>
