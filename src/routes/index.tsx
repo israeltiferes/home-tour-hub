@@ -1,3 +1,4 @@
+// Holy Home Tours — homepage route
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import {
