@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import {
   ArrowRight,
@@ -188,6 +188,7 @@ const tours = [
     city: "Tel Aviv",
     accent: "+ Netanya",
     img: telAviv,
+    to: "/tour/tel-aviv" as const,
     desc: "Coastal living, Mediterranean communities and the newest Anglo developments. Morning networking breakfast with local olim.",
     tags: [
       { icon: Waves, label: "Coastal" },
@@ -201,6 +202,7 @@ const tours = [
     city: "Jerusalem",
     accent: "",
     img: jerusalemStreet,
+    to: "/tour/jerusalem" as const,
     desc: "Katamon, Baka, Givat Mordechai. Walk the Anglo neighborhoods, visit schools, attend an evening legal Q&A session.",
     tags: [
       { icon: Landmark, label: "Old City" },
@@ -214,6 +216,7 @@ const tours = [
     city: "Modi'in",
     accent: "+ Beit Shemesh",
     img: beitShemesh,
+    to: "/tour/modiin" as const,
     desc: "Family-oriented Anglo communities. Aliyah planning session and a personalized roadmap with your Nefesh B'Nefesh advisor.",
     tags: [
       { icon: Mountain, label: "Hills" },
@@ -239,7 +242,10 @@ function Tours() {
         <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-3">
           {tours.map((t, i) => (
             <Reveal key={t.n} delay={i * 0.08}>
-              <article className="group relative flex h-full flex-col overflow-hidden bg-background shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-luxe">
+              <Link
+                to={t.to}
+                className="group relative flex h-full flex-col overflow-hidden bg-background shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-luxe focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={t.img}
@@ -282,8 +288,12 @@ function Tours() {
                       </span>
                     ))}
                   </div>
+                  <div className="flex items-center gap-2 pt-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold transition-colors group-hover:text-foreground">
+                    View the Day
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </div>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>

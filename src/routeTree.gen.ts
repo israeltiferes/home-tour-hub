@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TourTelAvivRouteImport } from './routes/tour.tel-aviv'
+import { Route as TourModiinRouteImport } from './routes/tour.modiin'
+import { Route as TourJerusalemRouteImport } from './routes/tour.jerusalem'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TourTelAvivRoute = TourTelAvivRouteImport.update({
+  id: '/tour/tel-aviv',
+  path: '/tour/tel-aviv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TourModiinRoute = TourModiinRouteImport.update({
+  id: '/tour/modiin',
+  path: '/tour/modiin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TourJerusalemRoute = TourJerusalemRouteImport.update({
+  id: '/tour/jerusalem',
+  path: '/tour/jerusalem',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/tour/jerusalem': typeof TourJerusalemRoute
+  '/tour/modiin': typeof TourModiinRoute
+  '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/tour/jerusalem': typeof TourJerusalemRoute
+  '/tour/modiin': typeof TourModiinRoute
+  '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/tour/jerusalem': typeof TourJerusalemRoute
+  '/tour/modiin': typeof TourModiinRoute
+  '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
+  id: '__root__' | '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  TourJerusalemRoute: typeof TourJerusalemRoute
+  TourModiinRoute: typeof TourModiinRoute
+  TourTelAvivRoute: typeof TourTelAvivRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tour/tel-aviv': {
+      id: '/tour/tel-aviv'
+      path: '/tour/tel-aviv'
+      fullPath: '/tour/tel-aviv'
+      preLoaderRoute: typeof TourTelAvivRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tour/modiin': {
+      id: '/tour/modiin'
+      path: '/tour/modiin'
+      fullPath: '/tour/modiin'
+      preLoaderRoute: typeof TourModiinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tour/jerusalem': {
+      id: '/tour/jerusalem'
+      path: '/tour/jerusalem'
+      fullPath: '/tour/jerusalem'
+      preLoaderRoute: typeof TourJerusalemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  TourJerusalemRoute: TourJerusalemRoute,
+  TourModiinRoute: TourModiinRoute,
+  TourTelAvivRoute: TourTelAvivRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
