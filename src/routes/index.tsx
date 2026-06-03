@@ -20,7 +20,6 @@ import {
 import { useState } from "react";
 import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
-import heroJerusalem from "@/assets/hero-jerusalem.jpg";
 import telAviv from "@/assets/tel-aviv.jpg";
 import jerusalemStreet from "@/assets/jerusalem-street.jpg";
 import beitShemesh from "@/assets/beit-shemesh.jpg";
@@ -52,8 +51,8 @@ function Hero() {
     <section id="top" className="relative min-h-[100svh] overflow-hidden bg-ink text-bone">
       <div className="absolute inset-0">
         <img
-          src={heroJerusalem}
-          alt="Aerial view of Jerusalem's Old City at twilight"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_3DNKnAOZ5NxyPJ7VuKsiqOOpurN/hf_20260527_151332_8c82a0ff-74d9-4af6-9cab-587c108c938d.png"
+          alt="Israel landscape"
           className="h-full w-full object-cover"
           fetchPriority="high"
           width={1920}
@@ -76,22 +75,14 @@ function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="mt-7 font-display text-[clamp(2.75rem,7.5vw,6.5rem)] font-light leading-[0.95] tracking-[-0.02em] text-balance">
-              You want to own a home<br />
-              in <em className="italic font-normal text-gold-light">Israel.</em>
+              Explore Israel<br />
+              <em className="italic font-normal text-gold-light">Before You Decide.</em>
             </h1>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <p className="mt-6 font-display text-[clamp(1.25rem,2vw,1.75rem)] italic font-light text-bone/85">
-              You just don't know where to start.
-            </p>
           </Reveal>
 
           <Reveal delay={0.3}>
             <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-bone/75 text-pretty">
-              A private guided group tour through Israel's newest developments
-              and most sought-after Anglo communities. Real experts. Real estate
-              education. Zero pressure — total clarity.
+              A private small-group experience for anyone seriously considering buying a home in Israel. Tour the communities, explore new developments, and spend real time with lawyers, mortgage brokers, and aliyah advisors — so when the time is right, you already have the right people in your corner.
             </p>
           </Reveal>
 
@@ -242,7 +233,7 @@ function Tours() {
             eyebrow="October 2026 · Israel"
             title="Sukkot Tours"
             italicTail="2026."
-            sub="A small group of families exploring Israel's most desirable communities and newest developments. Maximum 15 participants per tour."
+            sub="For most of us, buying in Israel isn't a question of if — it's when. Holy Home Tours gives you the tools, the knowledge, and the right people so that when it's the time to buy, you're ready."
           />
         </Reveal>
 
@@ -921,7 +912,7 @@ function LandingPage() {
         <Tours />
         <Gains />
         <Experts />
-        <Itinerary />
+        {/* <Itinerary /> */}{/* Saved for later use — "Three days designed to give you clarity" */}
         <Register />
         <FAQ />
       </main>
