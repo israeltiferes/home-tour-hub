@@ -548,7 +548,7 @@ function Register() {
   return (
     <section id="register" className="relative bg-sand py-28 text-foreground md:py-36">
       <div className="mx-auto grid max-w-[1480px] gap-16 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
-        <Reveal>
+        <Reveal className="order-2 lg:order-1">
           <div>
             <div className="flex items-center gap-3 text-foreground/60">
               <span className="h-px w-10 bg-gold" />
@@ -590,7 +590,7 @@ function Register() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.1} className="order-1 lg:order-2">
           <RegistrationForm />
         </Reveal>
       </div>
