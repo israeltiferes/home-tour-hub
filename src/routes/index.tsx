@@ -75,7 +75,7 @@ function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="mt-7 font-display text-[clamp(2.75rem,7.5vw,6.5rem)] font-light leading-[0.95] tracking-[-0.02em] text-balance">
-              Explore Israel <em className="italic font-normal text-gold-light">Before You Decide.</em>
+              Explore Israel Before You Decide.
             </h1>
           </Reveal>
 
