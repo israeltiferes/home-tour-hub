@@ -185,27 +185,27 @@ function SectionHeading({
 
 const tours = [
   {
-    n: "10/4",
-    day: "Sunday · October 4",
-    city: "Tel Aviv",
-    accent: "+ Netanya",
-    img: telAviv,
-    to: "/tour/tel-aviv" as const,
-    desc: "Coastal living, Mediterranean communities and the newest Anglo developments. Morning networking breakfast with local olim.",
+    n: "10/5",
+    day: "Monday · October 5",
+    city: "Beit Shemesh",
+    accent: "& Modi'in",
+    img: beitShemesh,
+    to: "/tour/modiin" as const,
+    desc: "Two of Israel's most established Anglo family communities in one day — real developments, real experts, honest answers, no pressure.",
     tags: [
-      { icon: Waves, label: "Coastal" },
-      { icon: Sun, label: "Breakfast" },
+      { icon: Mountain, label: "Family" },
+      { icon: Compass, label: "Aliyah Plan" },
       { icon: Building2, label: "New Builds" },
     ],
   },
   {
-    n: "10/5",
-    day: "Monday · October 5",
+    n: "10/6",
+    day: "Tuesday · October 6",
     city: "Jerusalem",
-    accent: "",
+    accent: "& Givat Ze'ev",
     img: jerusalemStreet,
     to: "/tour/jerusalem" as const,
-    desc: "Katamon, Baka, Givat Mordechai. Walk the Anglo neighborhoods, visit schools, attend an evening legal Q&A session.",
+    desc: "Walk Jerusalem's newest Anglo neighborhoods with a lawyer, mortgage specialist, and a rabbi on hand for every question.",
     tags: [
       { icon: Landmark, label: "Old City" },
       { icon: Scale, label: "Legal Q&A" },
@@ -213,20 +213,21 @@ const tours = [
     ],
   },
   {
-    n: "10/6",
-    day: "Tuesday · October 6",
-    city: "Modi'in",
-    accent: "+ Beit Shemesh",
-    img: beitShemesh,
-    to: "/tour/modiin" as const,
-    desc: "Family-oriented Anglo communities. Aliyah planning session and a personalized roadmap with your Nefesh B'Nefesh advisor.",
+    n: "10/7",
+    day: "Wednesday · October 7",
+    city: "Netanya",
+    accent: "& Tel Aviv",
+    img: telAviv,
+    to: "/tour/tel-aviv" as const,
+    desc: "Mediterranean coastal living — Netanya's fastest-growing developments, lunch in Tel Aviv, and a closing expert panel.",
     tags: [
-      { icon: Mountain, label: "Hills" },
-      { icon: Compass, label: "Aliyah Plan" },
+      { icon: Waves, label: "Coastal" },
+      { icon: Sun, label: "Breakfast" },
       { icon: Building2, label: "New Builds" },
     ],
   },
 ];
+
 
 function Tours() {
   return (
@@ -458,32 +459,33 @@ function Experts() {
 const itinerary = [
   {
     n: "01",
-    label: "Sunday · October 4",
-    city: "Tel Aviv",
-    accent: "+ Netanya",
+    label: "Monday · October 5",
+    city: "Beit Shemesh",
+    accent: "& Modi'in",
     desc:
-      "Start on the Mediterranean coast. Walk two of Israel's most popular Anglo communities. Morning networking breakfast with local olim sharing the honest perspective — the good and the challenging.",
-    tags: ["Coastal Communities", "Networking Breakfast", "New Developments", "Meet Local Olim", "Mortgage Session"],
+      "Two of Israel's most established Anglo family communities in one day — real developments, real experts, honest answers, no pressure.",
+    tags: ["Family Communities", "Development Visits", "Mortgage Seminar", "Legal Q&A", "Open Q&A"],
   },
   {
     n: "02",
-    label: "Monday · October 5",
+    label: "Tuesday · October 6",
     city: "Jerusalem",
-    accent: "",
+    accent: "& Givat Ze'ev",
     desc:
-      "The heart of Jewish life in Israel. Katamon, Baka, Givat Mordechai — we walk you through the Anglo neighborhoods. Visit schools, feel Friday afternoon. Evening legal session covering contracts and protections.",
-    tags: ["Old City Views", "Legal Q&A", "Community Shuls", "School Visits", "Development Tours"],
+      "Walk Jerusalem's newest Anglo neighborhoods with a lawyer, mortgage specialist, and a rabbi on hand for every question.",
+    tags: ["Nefesh B'Nefesh", "Legal & Mortgage", "Community Rabbi", "Development Tours", "Open Q&A"],
   },
   {
     n: "03",
-    label: "Tuesday · October 6",
-    city: "Modi'in",
-    accent: "+ Beit Shemesh",
+    label: "Wednesday · October 7",
+    city: "Netanya",
+    accent: "& Tel Aviv",
     desc:
-      "The communities most American families never consider — and end up loving most. Newer, deeply Anglo, family-oriented. Closing session to map out your specific aliyah timeline and what happens next.",
-    tags: ["Family Focus", "Aliyah Roadmap", "New Developments", "Developer Meetings"],
+      "Mediterranean coastal living — Netanya's fastest-growing developments, lunch in Tel Aviv, and a closing expert panel.",
+    tags: ["Coastal", "New Developments", "Legal & Mortgage", "Expert Panel", "Closing Q&A"],
   },
 ];
+
 
 function Itinerary() {
   return (
