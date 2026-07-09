@@ -18,24 +18,19 @@ export const Route = createFileRoute("/tour/jerusalem")({
 function JerusalemDay() {
   return (
     <TourDayPage
-      label="Day One · October 4"
-      heroHeadline="Where Every Street Has Always"
-      heroHeadlineItalic="Known Your Name"
-      heroSubheadline="A guided day through Jerusalem and Givat Ze'ev — for those who feel the pull of this city and want to understand what it means to actually live here."
+      eyebrow="Day One · October 4"
+      headline="Where Every Street Has Always Known Your Name"
+      subhead="A guided day through Jerusalem and Givat Ze'ev — for those who feel the pull of this city and want to understand what it means to actually live here."
       heroImage="https://images.unsplash.com/photo-1544948503-1ccb09ae26d7?w=1600&auto=format&fit=crop&q=80"
-      intro="Jerusalem isn't just a city — it's a decision. This day is built for buyers who want to walk the neighborhoods, meet the experts, and leave with real clarity. Not brochures. Answers."
-      highlights={[
-        { title: "Legal Seminar", body: "Israeli real estate attorney covers the full purchase process for foreign buyers." },
-        { title: "Two Development Tours", body: "Walk through featured projects in Jerusalem and Givat Ze'ev side by side." },
-        { title: "Mortgage Workshop", body: "An Israeli mortgage specialist breaks down financing options from abroad." },
-        { title: "Lunch in the Shuk", body: "Experience Jerusalem's daily rhythm — this is what Tuesday looks like." },
-        { title: "Givat Ze'ev Community Tour", body: "More space, lower prices, and still in the Jerusalem orbit." },
-        { title: "Community Conversation", body: "A local rabbi on what building a life in Jerusalem actually feels like." },
-      ]}
-      photos={[
-        { src: "https://images.unsplash.com/photo-1547483238-f400e65ccd56?w=800&auto=format&fit=crop&q=80", alt: "Jerusalem Old City" },
-        { src: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=800&auto=format&fit=crop&q=80", alt: "Jerusalem neighborhood" },
-        { src: "https://images.unsplash.com/photo-1552413580-eb6e9af42f56?w=800&auto=format&fit=crop&q=80", alt: "Jerusalem architecture" },
+      itineraryCity="Jerusalem and Givat Ze'ev"
+      itineraryIntro="Jerusalem isn't just a city — it's a decision. This day is built for buyers who want to walk the neighborhoods, meet the experts, and leave with real clarity. Not brochures. Answers."
+      itinerary={[
+        { time: "8:30 AM", activity: "Legal seminar: Israeli real estate attorney covers the full purchase process for foreign buyers." },
+        { time: "10:00 AM", activity: "Two development tours: Walk through featured projects in Jerusalem and Givat Ze'ev side by side." },
+        { time: "12:30 PM", activity: "Lunch in the Shuk: Experience Jerusalem's daily rhythm — this is what Tuesday looks like." },
+        { time: "2:00 PM", activity: "Mortgage workshop: An Israeli mortgage specialist breaks down financing options from abroad." },
+        { time: "4:00 PM", activity: "Givat Ze'ev community tour: More space, lower prices, and still in the Jerusalem orbit." },
+        { time: "5:30 PM", activity: "Community conversation: A local rabbi on what building a life in Jerusalem actually feels like." },
       ]}
     />
   );
