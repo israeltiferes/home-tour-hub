@@ -133,13 +133,15 @@
   .vignette::before {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
-  @keyframes reveal-in {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: none; }
   }
+
   .reveal-in {
     animation: reveal-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
 
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
 }
+
