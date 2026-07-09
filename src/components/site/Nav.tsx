@@ -19,14 +19,12 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-6 md:px-10">
-        <a href="#top" className="flex items-baseline gap-2">
-          <span
-            className={`font-display text-[19px] font-light tracking-[0.22em] uppercase transition-colors ${
-              scrolled ? "text-foreground" : "text-bone"
-            }`}
-          >
-            Holy <span className="font-medium italic text-gold">Home</span> Tours
-          </span>
+        <a href="#top" className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Holy Homes Tours"
+            className="h-10 w-auto object-contain"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-[12px] uppercase tracking-[0.18em]">
