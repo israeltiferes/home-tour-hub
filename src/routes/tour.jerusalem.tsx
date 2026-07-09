@@ -2,35 +2,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { TourDayPage } from "@/components/site/TourDayPage";
 
 export const Route = createFileRoute("/tour/jerusalem")({
-  head: () => ({
-    meta: [
-      { title: "Day One · Jerusalem & Givat Ze'ev — Holy Home Tours" },
-      {
-        name: "description",
-        content:
-          "A guided day through Jerusalem and Givat Ze'ev for serious buyers — legal seminars, mortgage clarity, and developments seen from the inside.",
-      },
-    ],
-  }),
+  head: () => ({ meta: [{ title: "Day Two · Jerusalem & Givat Ze'ev — Holy Home Tours" }] }),
   component: JerusalemDay,
 });
 
 function JerusalemDay() {
   return (
     <TourDayPage
-      eyebrow="Day One · October 4"
-      headline="Where Every Street Has Always Known Your Name"
-      subhead="A guided day through Jerusalem and Givat Ze'ev — for those who feel the pull of this city and want to understand what it means to actually live here."
-      heroImage="https://images.unsplash.com/photo-1544948503-1ccb09ae26d7?w=1600&auto=format&fit=crop&q=80"
-      itineraryCity="Jerusalem and Givat Ze'ev"
-      itineraryIntro="Jerusalem isn't just a city — it's a decision. This day is built for buyers who want to walk the neighborhoods, meet the experts, and leave with real clarity. Not brochures. Answers."
+      eyebrow="Day Two · Tuesday, October 6"
+      headline="In Jerusalem, buying a home is never just buying a home."
+      subhead="Jerusalem & Givat Ze'ev"
+      heroImage="/hero-day2.jpg"
+      itineraryCity="Jerusalem"
+      itineraryIntro="A day that moves from Jerusalem's newest communities to its oldest streets — with a lawyer, a mortgage specialist, and a rabbi on hand for every question."
       itinerary={[
-        { time: "8:30 AM", activity: "Legal seminar: Israeli real estate attorney covers the full purchase process for foreign buyers." },
-        { time: "10:00 AM", activity: "Two development tours: Walk through featured projects in Jerusalem and Givat Ze'ev side by side." },
-        { time: "12:30 PM", activity: "Lunch in the Shuk: Experience Jerusalem's daily rhythm — this is what Tuesday looks like." },
-        { time: "2:00 PM", activity: "Mortgage workshop: An Israeli mortgage specialist breaks down financing options from abroad." },
-        { time: "4:00 PM", activity: "Givat Ze'ev community tour: More space, lower prices, and still in the Jerusalem orbit." },
-        { time: "5:30 PM", activity: "Community conversation: A local rabbi on what building a life in Jerusalem actually feels like." },
+        { time: "10:00 AM", activity: "Welcome breakfast & icebreaker with Nefesh B'Nefesh" },
+        { time: "10:30 AM", activity: "Bus departure" },
+        { time: "10:40 AM", activity: "Development visit #1" },
+        { time: "11:40 AM", activity: "Development visit #2" },
+        { time: "12:30 PM", activity: "Travel to lunch" },
+        { time: "12:45 PM", activity: "Lunch + legal & mortgage seminar" },
+        { time: "2:15 PM", activity: "Development visit #3" },
+        { time: "3:00 PM", activity: "Community discussion with a rabbi" },
+        { time: "3:30 PM", activity: "Open Q&A" },
+        { time: "4:00 PM", activity: "Return to Jerusalem city center" },
       ]}
     />
   );

@@ -2,35 +2,29 @@ import { createFileRoute } from "@tanstack/react-router";
 import { TourDayPage } from "@/components/site/TourDayPage";
 
 export const Route = createFileRoute("/tour/modiin")({
-  head: () => ({
-    meta: [
-      { title: "Day Three · Modiin & Beit Shemesh — Holy Home Tours" },
-      {
-        name: "description",
-        content:
-          "A day in Modiin and Beit Shemesh — for families who know Israel is home and want to understand which community is theirs.",
-      },
-    ],
-  }),
+  head: () => ({ meta: [{ title: "Day One · Beit Shemesh & Modi'in — Holy Home Tours" }] }),
   component: ModiinDay,
 });
 
 function ModiinDay() {
   return (
     <TourDayPage
-      eyebrow="Day Three · October 6"
-      headline="This Is What Raising a Family in Israel Actually Looks Like"
-      subhead="A day in Modiin and Beit Shemesh — for families who know Israel is home and want to understand which community is theirs."
-      heroImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&auto=format&fit=crop&q=80"
-      itineraryCity="Modiin and Beit Shemesh"
-      itineraryIntro="The question isn't whether — it's where. This day takes you inside two of Israel's most established Anglo family communities so you can see, compare, and decide with real confidence."
+      eyebrow="Day One · Monday, October 5"
+      headline="The neighborhoods where Anglo families keep landing — and never leaving."
+      subhead="Family Communities: Modi'in & Beit Shemesh"
+      heroImage="/hero-day1.jpg"
+      itineraryCity="Beit Shemesh & Modi'in"
+      itineraryIntro="A full day across two of Israel's most established Anglo communities — real developments, real experts, and honest answers, with no pressure."
       itinerary={[
-        { time: "8:30 AM", activity: "Aliyah & lifestyle talk: Taxes, schools, and practical family life in Israel — over breakfast in Modiin." },
-        { time: "10:00 AM", activity: "Mortgage workshop: An Israeli mortgage specialist on financing a purchase from abroad." },
-        { time: "12:30 PM", activity: "Lunch in Ramat Beit Shemesh Bet: A local rabbi shares what community life actually feels like from the inside." },
-        { time: "2:00 PM", activity: "Modiin development tour: Walk a featured project in one of Israel's most thoughtfully planned cities." },
-        { time: "4:00 PM", activity: "Ramat Beit Shemesh Bet tour: See the newer, fast-growing side of Beit Shemesh — vibrant and evolving." },
-        { time: "5:30 PM", activity: "Ramat Aleph + legal seminar: Tour the established community and close the day with a full attorney Q&A." },
+        { time: "9:15–10:00 AM", activity: "Optional pickup from Jerusalem (two convenient locations)" },
+        { time: "10:00 AM", activity: "Welcome breakfast & Aliyah lifestyle talk — Modi'in" },
+        { time: "10:45 AM", activity: "Development visit #1 — Modi'in" },
+        { time: "11:30 AM", activity: "Travel to Beit Shemesh" },
+        { time: "12:00 PM", activity: "Development visit #2 — Ramat Beit Shemesh" },
+        { time: "12:45 PM", activity: "Lunch + mortgage seminar with a community rabbi" },
+        { time: "2:30 PM", activity: "Development visit #3 + legal seminar & Q&A" },
+        { time: "4:00 PM", activity: "Networking & open Q&A" },
+        { time: "5:00 PM", activity: "Optional return transportation to Jerusalem" },
       ]}
     />
   );
