@@ -24,7 +24,7 @@ export function Nav() {
           <img
             src={logoAsset.url}
             alt="Holy Homes Tours"
-            className="h-10 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </a>
 
