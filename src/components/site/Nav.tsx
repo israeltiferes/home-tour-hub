@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
