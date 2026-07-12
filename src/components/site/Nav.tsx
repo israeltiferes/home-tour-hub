@@ -22,7 +22,7 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-6 md:px-10">
         <a href="#top" className="flex items-center">
           <img
-            src="/logo.png"
+            src={logoAsset.url}
             alt="Holy Homes Tours"
             className="h-10 w-auto object-contain"
           />
