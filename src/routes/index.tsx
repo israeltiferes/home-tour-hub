@@ -744,7 +744,7 @@ function LandingPage() {
         <Tours />
         <Gains />
         <Experts />
-        {/* <Itinerary /> */}{/* Saved for later use — "Three days designed to give you clarity" */}
+        <Itinerary />
         <Register />
         <FAQ />
       </main>
