@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ReserveRouteImport } from './routes/reserve'
+import { Route as ReserveConfirmedRouteImport } from './routes/reserve.confirmed'
 import { Route as TourTelAvivRouteImport } from './routes/tour.tel-aviv'
 import { Route as TourModiinRouteImport } from './routes/tour.modiin'
 import { Route as TourJerusalemRouteImport } from './routes/tour.jerusalem'
@@ -17,6 +19,16 @@ import { Route as TourJerusalemRouteImport } from './routes/tour.jerusalem'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReserveRoute = ReserveRouteImport.update({
+  id: '/reserve',
+  path: '/reserve',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReserveConfirmedRoute = ReserveConfirmedRouteImport.update({
+  id: '/reserve/confirmed',
+  path: '/reserve/confirmed',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TourTelAvivRoute = TourTelAvivRouteImport.update({
@@ -37,12 +49,16 @@ const TourJerusalemRoute = TourJerusalemRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/reserve': typeof ReserveRoute
+  '/reserve/confirmed': typeof ReserveConfirmedRoute
   '/tour/jerusalem': typeof TourJerusalemRoute
   '/tour/modiin': typeof TourModiinRoute
   '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/reserve': typeof ReserveRoute
+  '/reserve/confirmed': typeof ReserveConfirmedRoute
   '/tour/jerusalem': typeof TourJerusalemRoute
   '/tour/modiin': typeof TourModiinRoute
   '/tour/tel-aviv': typeof TourTelAvivRoute
@@ -50,20 +66,24 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/reserve': typeof ReserveRoute
+  '/reserve/confirmed': typeof ReserveConfirmedRoute
   '/tour/jerusalem': typeof TourJerusalemRoute
   '/tour/modiin': typeof TourModiinRoute
   '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
+  fullPaths: '/' | '/reserve' | '/reserve/confirmed' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
-  id: '__root__' | '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
+  to: '/' | '/reserve' | '/reserve/confirmed' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
+  id: '__root__' | '/' | '/reserve' | '/reserve/confirmed' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ReserveRoute: typeof ReserveRoute
+  ReserveConfirmedRoute: typeof ReserveConfirmedRoute
   TourJerusalemRoute: typeof TourJerusalemRoute
   TourModiinRoute: typeof TourModiinRoute
   TourTelAvivRoute: typeof TourTelAvivRoute
@@ -76,6 +96,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reserve': {
+      id: '/reserve'
+      path: '/reserve'
+      fullPath: '/reserve'
+      preLoaderRoute: typeof ReserveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reserve/confirmed': {
+      id: '/reserve/confirmed'
+      path: '/reserve/confirmed'
+      fullPath: '/reserve/confirmed'
+      preLoaderRoute: typeof ReserveConfirmedRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tour/tel-aviv': {
@@ -104,6 +138,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ReserveRoute: ReserveRoute,
+  ReserveConfirmedRoute: ReserveConfirmedRoute,
   TourJerusalemRoute: TourJerusalemRoute,
   TourModiinRoute: TourModiinRoute,
   TourTelAvivRoute: TourTelAvivRoute,
