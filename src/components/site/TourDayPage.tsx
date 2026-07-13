@@ -12,11 +12,13 @@ export type TourDayPageProps = {
   itineraryCity: string;
   itineraryIntro: string;
   itinerary: TourItineraryRow[];
+  reserveDay: "day1" | "day2" | "day3";
 };
 
 const RESERVE_COPY = "Each tour is limited to twenty participants, with four experts alongside you all day — an Israeli real-estate attorney, a mortgage specialist, a Nefesh B'Nefesh advisor, and a licensed guide. Places are held first come, first served.";
 
-export function TourDayPage({ eyebrow, headline, subhead, heroImage, itineraryCity, itineraryIntro, itinerary }: TourDayPageProps) {
+export function TourDayPage({ eyebrow, headline, subhead, heroImage, itineraryCity, itineraryIntro, itinerary, reserveDay }: TourDayPageProps) {
+  const reserveSearch = { day: reserveDay } as const;
   return (
     <div className="min-h-screen antialiased" style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}>
       <Nav />
@@ -29,7 +31,7 @@ export function TourDayPage({ eyebrow, headline, subhead, heroImage, itineraryCi
           <p className="text-[11px] font-semibold uppercase tracking-[0.30em]" style={{ color: "#B8960A" }}>{eyebrow}</p>
           <h1 className="mt-5 text-balance font-semibold leading-[1.02]" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "#F5EFE0", fontSize: "clamp(2.2rem, 5.5vw, 5rem)" }}>{headline}</h1>
           <p className="mx-auto mt-5 max-w-lg text-[1rem] leading-relaxed" style={{ color: "rgba(245,239,224,0.70)" }}>{subhead}</p>
-          <a href="#reserve" className="mt-8 inline-flex items-center gap-2 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] hover:opacity-90" style={{ background: "#B8960A", color: "#1F3552" }}>Reserve Your Spot</a>
+          <Link to="/reserve" search={reserveSearch} className="mt-8 inline-flex items-center gap-2 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] hover:opacity-90" style={{ background: "#B8960A", color: "#1F3552" }}>Reserve Your Spot</Link>
         </div>
       </section>
 
@@ -56,7 +58,12 @@ export function TourDayPage({ eyebrow, headline, subhead, heroImage, itineraryCi
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-semibold leading-tight" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "#F5EFE0", fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}>Reserve Your Place on the Tour</h2>
           <p className="mx-auto mt-4 max-w-lg text-[0.92rem] leading-relaxed" style={{ color: "rgba(245,239,224,0.65)" }}>{RESERVE_COPY}</p>
-          <a href="https://wa.me/972544336098" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2.5 px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] hover:opacity-90" style={{ background: "#B8960A", color: "#1F3552" }}>Reserve Your Spot</a>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link to="/reserve" search={reserveSearch} className="inline-flex items-center gap-2.5 px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] hover:opacity-90" style={{ background: "#B8960A", color: "#1F3552" }}>Reserve Your Spot</Link>
+            <a href="https://wa.me/972544336098" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-4 text-[12px] font-medium uppercase tracking-[0.22em] hover:opacity-90" style={{ border: "1px solid rgba(245,239,224,0.30)", color: "#F5EFE0" }}>
+              <MessageCircle className="h-4 w-4" /> WhatsApp
+            </a>
+          </div>
           <div className="mt-5 flex items-center justify-center gap-2">
             <MessageCircle className="h-4 w-4" style={{ color: "rgba(245,239,224,0.40)" }} />
             <span className="text-[0.82rem] tracking-wide" style={{ color: "rgba(245,239,224,0.40)" }}>WhatsApp: +972 54 433 6098</span>
