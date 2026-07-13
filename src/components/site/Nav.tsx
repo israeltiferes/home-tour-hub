@@ -62,7 +62,7 @@ export function Nav() {
             WhatsApp
           </a>
           <a
-            href="#register"
+            href="/reserve"
             className="inline-flex items-center gap-2 bg-foreground text-background px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-gold hover:text-foreground transition-colors"
           >
             Reserve
