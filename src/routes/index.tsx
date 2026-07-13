@@ -11,7 +11,7 @@ import {
   ShieldCheck,
   Compass,
   Sparkles,
-  Check,
+  
   Plus,
   Minus,
   Sun,
@@ -21,7 +21,7 @@ import {
 import { useState } from "react";
 import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
-import { RegistrationForm } from "@/components/site/RegistrationForm";
+
 import telAviv from "@/assets/tel-aviv.jpg";
 import jerusalemStreet from "@/assets/jerusalem-street.jpg";
 import beitShemesh from "@/assets/beit-shemesh.jpg";
@@ -547,16 +547,6 @@ function Itinerary() {
 
 /* ─────────────────────────── Register / Form ─────────────────────── */
 
-const included = [
-  "Guided community tours through Israel's top Anglo neighborhoods",
-  "New development visits with project representatives",
-  
-  "Legal guidance and Q&A with an Israeli real estate attorney",
-  "Mortgage and financing education for American buyers",
-  "School and community comparisons across all neighborhoods",
-  "Aliyah guidance, resources, and a personalized roadmap",
-  "Expert access in a small, intimate group setting",
-];
 
 function Register() {
   return (
