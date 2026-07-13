@@ -13,6 +13,7 @@ function ModiinDay() {
       headline="The neighborhoods where Anglo families keep landing — and never leaving."
       subhead="Family Communities: Modi'in & Beit Shemesh"
       heroImage="/hero-day1.jpg"
+      reserveDay="day1"
       itineraryCity="Beit Shemesh & Modi'in"
       itineraryIntro="A full day across two of Israel's most established Anglo communities — real developments, real experts, and honest answers, with no pressure."
       itinerary={[

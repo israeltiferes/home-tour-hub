@@ -13,6 +13,7 @@ function JerusalemDay() {
       headline="In Jerusalem, buying a home is never just buying a home."
       subhead="Jerusalem & Givat Ze'ev"
       heroImage="/hero-day2.jpg"
+      reserveDay="day2"
       itineraryCity="Jerusalem"
       itineraryIntro="A day that moves from Jerusalem's newest communities to its oldest streets — with a lawyer, a mortgage specialist, and a rabbi on hand for every question."
       itinerary={[

@@ -13,6 +13,7 @@ function TelAvivDay() {
       headline="Israel's coast is still rising. So is the window to get in."
       subhead="Coastal Living: Netanya & Tel Aviv"
       heroImage="/hero-day3.jpg"
+      reserveDay="day3"
       itineraryCity="Netanya & Tel Aviv"
       itineraryIntro="The finale, on the Mediterranean — Netanya's fastest-growing developments in the morning, lunch in Tel Aviv, and a closing panel of experts before you head home."
       itinerary={[

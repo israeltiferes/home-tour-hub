@@ -9,11 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ReserveRouteImport } from './routes/reserve'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TourTelAvivRouteImport } from './routes/tour.tel-aviv'
 import { Route as TourModiinRouteImport } from './routes/tour.modiin'
 import { Route as TourJerusalemRouteImport } from './routes/tour.jerusalem'
+import { Route as ReserveConfirmedRouteImport } from './routes/reserve.confirmed'
 
+const ReserveRoute = ReserveRouteImport.update({
+  id: '/reserve',
+  path: '/reserve',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -34,15 +41,24 @@ const TourJerusalemRoute = TourJerusalemRouteImport.update({
   path: '/tour/jerusalem',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReserveConfirmedRoute = ReserveConfirmedRouteImport.update({
+  id: '/confirmed',
+  path: '/confirmed',
+  getParentRoute: () => ReserveRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/reserve': typeof ReserveRouteWithChildren
+  '/reserve/confirmed': typeof ReserveConfirmedRoute
   '/tour/jerusalem': typeof TourJerusalemRoute
   '/tour/modiin': typeof TourModiinRoute
   '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/reserve': typeof ReserveRouteWithChildren
+  '/reserve/confirmed': typeof ReserveConfirmedRoute
   '/tour/jerusalem': typeof TourJerusalemRoute
   '/tour/modiin': typeof TourModiinRoute
   '/tour/tel-aviv': typeof TourTelAvivRoute
@@ -50,20 +66,42 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/reserve': typeof ReserveRouteWithChildren
+  '/reserve/confirmed': typeof ReserveConfirmedRoute
   '/tour/jerusalem': typeof TourJerusalemRoute
   '/tour/modiin': typeof TourModiinRoute
   '/tour/tel-aviv': typeof TourTelAvivRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
+  fullPaths:
+    | '/'
+    | '/reserve'
+    | '/reserve/confirmed'
+    | '/tour/jerusalem'
+    | '/tour/modiin'
+    | '/tour/tel-aviv'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
-  id: '__root__' | '/' | '/tour/jerusalem' | '/tour/modiin' | '/tour/tel-aviv'
+  to:
+    | '/'
+    | '/reserve'
+    | '/reserve/confirmed'
+    | '/tour/jerusalem'
+    | '/tour/modiin'
+    | '/tour/tel-aviv'
+  id:
+    | '__root__'
+    | '/'
+    | '/reserve'
+    | '/reserve/confirmed'
+    | '/tour/jerusalem'
+    | '/tour/modiin'
+    | '/tour/tel-aviv'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ReserveRoute: typeof ReserveRouteWithChildren
   TourJerusalemRoute: typeof TourJerusalemRoute
   TourModiinRoute: typeof TourModiinRoute
   TourTelAvivRoute: typeof TourTelAvivRoute
@@ -71,6 +109,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/reserve': {
+      id: '/reserve'
+      path: '/reserve'
+      fullPath: '/reserve'
+      preLoaderRoute: typeof ReserveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -99,11 +144,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TourJerusalemRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/reserve/confirmed': {
+      id: '/reserve/confirmed'
+      path: '/confirmed'
+      fullPath: '/reserve/confirmed'
+      preLoaderRoute: typeof ReserveConfirmedRouteImport
+      parentRoute: typeof ReserveRoute
+    }
   }
 }
 
+interface ReserveRouteChildren {
+  ReserveConfirmedRoute: typeof ReserveConfirmedRoute
+}
+
+const ReserveRouteChildren: ReserveRouteChildren = {
+  ReserveConfirmedRoute: ReserveConfirmedRoute,
+}
+
+const ReserveRouteWithChildren =
+  ReserveRoute._addFileChildren(ReserveRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ReserveRoute: ReserveRouteWithChildren,
   TourJerusalemRoute: TourJerusalemRoute,
   TourModiinRoute: TourModiinRoute,
   TourTelAvivRoute: TourTelAvivRoute,
@@ -111,13 +175,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
