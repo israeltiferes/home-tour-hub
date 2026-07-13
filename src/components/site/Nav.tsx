@@ -30,10 +30,10 @@ export function Nav() {
 
         <div className="hidden md:flex items-center gap-8 text-[12px] uppercase tracking-[0.18em]">
           {[
-            ["Tour", "#tour"],
-            ["Experts", "#experts"],
-            ["Itinerary", "#itinerary"],
-            ["FAQ", "#faq"],
+            ["Tour", "/#tour"],
+            ["Experts", "/#experts"],
+            ["Itinerary", "/#itinerary"],
+            ["FAQ", "/#faq"],
           ].map(([l, h]) => (
             <a
               key={h}
