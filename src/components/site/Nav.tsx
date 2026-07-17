@@ -17,8 +17,8 @@ export function Nav() {
       className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-gold-brand shadow-sm transition-[background-color] duration-300 ease-[ease]"
       style={scrolled ? undefined : { backgroundColor: "#B8960A" }}
     >
-
       <div className="mx-auto flex h-auto min-h-[8rem] max-w-[1480px] items-center justify-between px-6 py-3 md:min-h-[10rem] md:px-10 md:py-4">
+
         <a href="/" className="flex items-center">
           <img
             src={logoAsset.url}
