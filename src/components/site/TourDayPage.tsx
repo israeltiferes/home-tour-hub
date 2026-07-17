@@ -24,7 +24,7 @@ export function TourDayPage({ eyebrow, headline, subhead, heroImage, itineraryCi
       <Nav />
       <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6 text-center" style={{ backgroundImage: `url(${heroImage})`, backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #1F3552 0%, rgba(31,53,82,0.80) 35%, rgba(31,53,82,0.45) 60%, transparent 100%)" }} />
-        <Link to="/" className="absolute left-6 top-24 z-20 flex items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] hover:opacity-80" style={{ color: "rgba(245,239,224,0.60)" }}>
+        <Link to="/" className="absolute left-6 top-44 z-20 flex items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] hover:opacity-80 md:top-56" style={{ color: "rgba(245,239,224,0.60)" }}>
           <ArrowLeft className="h-3 w-3" /> All Tour Days
         </Link>
         <div className="relative z-10 mx-auto max-w-3xl">
