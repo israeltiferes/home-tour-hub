@@ -64,7 +64,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between gap-12 px-5 pt-28 pb-10 sm:px-6 md:px-10 md:pt-40 md:pb-16">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-[1480px] flex-col justify-between gap-12 px-5 pt-44 pb-10 sm:px-6 md:px-10 md:pt-56 md:pb-16">
         <div className="max-w-3xl">
           <Reveal>
             <div className="flex items-center gap-3 text-bone/70">
